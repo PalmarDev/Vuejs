@@ -48,7 +48,7 @@
 </template>
 
 <script>
-import axios from 'axios';
+import axios from "axios";
 
 export default {
   data() {
@@ -58,12 +58,12 @@ export default {
   },
   mounted() {
     axios
-      .get('http://localhost:3002/estudiante')
-      .then(response => {
+      .get("https://lexpin.net/estudiante")
+      .then((response) => {
         this.estudiantes = response.data;
         console.log(response.data);
       })
-      .catch(error => {
+      .catch((error) => {
         console.log(error);
       });
   },
